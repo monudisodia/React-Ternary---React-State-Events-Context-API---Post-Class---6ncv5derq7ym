@@ -6,11 +6,32 @@ const App = () => {
   useEffect(() => {
     setDay(date.toLocaleString(window.navigator.language, { weekday: 'long' }));
   }, [date])
-  const setTheMessage = (day) => {
-    return () ? "Hey Mango Monday" :
+//   const setTheMessage = (day) => {
+//     return () ? "Hey Mango Monday" :
      
 
-  }
+//   }
+  
+  const setTheMessage = (day) => {
+    switch (day) {
+      case 'Monday':
+        return 'Hey Mango Monday';
+      case 'Tuesday':
+        return 'Hey Tomato Tuesday';
+      case 'Wednesday':
+        return 'Hey Windy Wednesday';
+      case 'Thursday':
+        return 'Hey Thunder Thursday';
+      case 'Friday':
+        return 'Hey Fun Friday';
+      case 'Saturday':
+        return 'Hey Smooth Saturday';
+      case 'Sunday':
+        return 'Hey Sugar Sunday';
+      default:
+        return '';
+    }
+  };
   const msg = setTheMessage(day)
 
   return (
