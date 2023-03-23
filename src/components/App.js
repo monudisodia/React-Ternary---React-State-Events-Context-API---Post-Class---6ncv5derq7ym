@@ -12,25 +12,14 @@ const App = () => {
 
 //   }
   
-  const setTheMessage = (day) => {
-    switch (day) {
-      case 'Monday':
-        return 'Hey Mango Monday';
-      case 'Tuesday':
-        return 'Hey Tomato Tuesday';
-      case 'Wednesday':
-        return 'Hey Windy Wednesday';
-      case 'Thursday':
-        return 'Hey Thunder Thursday';
-      case 'Friday':
-        return 'Hey Fun Friday';
-      case 'Saturday':
-        return 'Hey Smooth Saturday';
-      case 'Sunday':
-        return 'Hey Sugar Sunday';
-      default:
-        return '';
-    }
+    const setTheMessage = (day) => {
+    return day === 'Monday' ? 'Hey Mango Monday' :
+           day === 'Tuesday' ? 'Hey Tomato Tuesday' :
+           day === 'Wednesday' ? 'Hey Windy Wednesday' :
+           day === 'Thursday' ? 'Hey Thunder Thursday' :
+           day === 'Friday' ? 'Hey Fun Friday' :
+           day === 'Saturday' ? 'Hey Smooth Saturday' :
+           day === 'Sunday' ? 'Hey Sugar Sunday' : '';
   };
   const msg = setTheMessage(day)
 
